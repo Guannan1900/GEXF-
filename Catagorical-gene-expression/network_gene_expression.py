@@ -26,9 +26,9 @@ def create_network(inputgexf, genexp, output):
     header_removal = gene_exp_transposed[1:]
     header_removal.columns = ['ENSP-ID', 'Gene-exp']
     final_table = header_removal.copy()
-    final_table['Gene-exp'] = final_table['Gene-exp'].map({'-1.0': 1, '0.0': 2, '1.0':3})
+    #final_table['Gene-exp'] = final_table['Gene-exp'].map({'-1.0': 1, '0.0': 2, '1.0':3})
     mapping = dictionary.merge(final_table, on=['ENSP-ID'], how='left')
-    mapping = mapping.fillna(0)
+    #mapping = mapping.fillna(0)
     node_attr1 = dict(zip(mapping.Nodes, mapping['Gene-exp']))
     nx.set_node_attributes(G, node_attr1, 'Gene-exp')
     nx.write_gexf(G, output)
