@@ -36,7 +36,3 @@ if __name__ == "__main__":
     end = time.time()
     print ('time elapsed:' + str(end - start))
 
-
-
-
-#print (Graph.nodes['10'])
