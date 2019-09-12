@@ -11,7 +11,7 @@ def adding_geneexp_absolute_value(inputgexf, geneexp, output):
     protein_dict = pd.DataFrame.from_dict(protein_labels, orient='index', columns=['ENSP-ID'])
     node_dict = pd.DataFrame.from_dict(node_labels, orient='index', columns=['Nodes'])
     dictionary = node_dict.join(protein_dict)
-    gene_exp = pd.read_csv(geneexp, usecols=['gene', 'expression_value'])
+    gene_exp = pd.read_csv(geneexp, sep=",", usecols=['gene', 'expression_value'])
     merged_geneexp_Nodes = pd.merge(gene_exp, dictionary, left_on=['gene'], right_on=['ENSP-ID'], how='right')
     new_df = merged_geneexp_Nodes[['Nodes', 'expression_value']]
     new_df.columns = ['Nodes', 'gene-exp']
