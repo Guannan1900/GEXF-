@@ -13,7 +13,7 @@ Output file = example-genexp.gexf
 
 Command line usage = 
 
-'python Node_id_gexf.py -inputgexf example.gexf -genex ER_pos_T47D -output example-genexp.gexf. 
+'python network_gene_expression.py -inputgexf example.gexf -genex ER_pos_T47D -output example-genexp.gexf. 
 
 Python3.6.4 and NetworkX 2.3 are required to run this code.
 
