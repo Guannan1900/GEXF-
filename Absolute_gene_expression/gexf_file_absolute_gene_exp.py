@@ -38,8 +38,6 @@ if __name__ == "__main__":
     print ('time elapsed:' + str(end - start))
 
 
-#print (G.nodes['1'])
-
 
 
 
